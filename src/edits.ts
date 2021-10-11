@@ -145,12 +145,10 @@ async function validateSelectedTrack(appEdit: AppEdit, options: EditOptions): Pr
 
 async function addReleasesToTrack(appEdit: AppEdit, options: EditOptions, versionCodes: number[]): Promise<Track> {
     let status: string | undefined = options.status;
-    if (status == undefined) {
-        if (options.userFraction != undefined) {
-            status = 'inProgress';
-        } else {
-            status = 'completed';
-        }
+    if (options.userFraction != undefined) {
+        status = 'inProgress';
+    } else {
+        status = 'completed';
     }
 
     core.debug(`Creating Track Release for Edit(${appEdit.id}) for Track(${options.track}) with a UserFraction(${options.userFraction}), Status(${status}), and VersionCodes(${versionCodes})`);
