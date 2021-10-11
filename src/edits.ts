@@ -151,7 +151,7 @@ async function addReleasesToTrack(appEdit: AppEdit, options: EditOptions, versio
         status = 'completed';
     }
 
-    console.log(`Creating Track Release for Edit(${appEdit.id}) for Track(${options.track}) with a UserFraction(${options.userFraction}), Status(${status}), and VersionCodes(${versionCodes})`);
+    core.info(`Creating Track Release for Edit(${appEdit.id}) for Track(${options.track}) with a UserFraction(${options.userFraction}), Status(${status}), and VersionCodes(${versionCodes})`);
     const res = await androidPublisher.edits.tracks
         .update({
             auth: options.auth,
