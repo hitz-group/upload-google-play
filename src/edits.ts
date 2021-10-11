@@ -145,6 +145,7 @@ async function validateSelectedTrack(appEdit: AppEdit, options: EditOptions): Pr
 
 async function addReleasesToTrack(appEdit: AppEdit, options: EditOptions, versionCodes: number[]): Promise<Track> {
     let status: string | undefined = options.status;
+    core.info(`Status(${status})`);
     if (options.userFraction != undefined) {
         status = 'inProgress';
     } else {
