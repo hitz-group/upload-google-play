@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r0adkll/upload-google-play.git"
+    "url": "git+https://github.com/bbjoern/upload-google-play.git"
   },
   "keywords": [
     "actions",
@@ -20,9 +20,9 @@
   "author": "r0adkll",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.6.0",
     "fast-glob": "^3.2.5",
-    "googleapis": "^68.0.0"
+    "googleapis": "88.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
