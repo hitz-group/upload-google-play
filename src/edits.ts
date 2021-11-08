@@ -83,6 +83,8 @@ export async function uploadToPlayStore(options: EditOptions, releaseFiles: stri
 
         // Commit the pending Edit
         core.info(`Committing the Edit`)
+        core.debug(`With applicationId: ${options.applicationId}`)
+        core.debug(`With changesNotSentForReview: ${options.changesNotSentForReview}`)
         const res = await androidPublisher.edits.commit({
             auth: options.auth,
             editId: appEdit.data.id!,
