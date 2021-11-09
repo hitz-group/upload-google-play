@@ -46,7 +46,7 @@ inputs:
   changesNotSentForReview:
     description: "The changesNotSentForReview option whether changes can be sent for review automatically or not"
     required: false
-    default: 'false'
+    default: 'true'
 outputs:
   internalSharingDownloadUrl:
     description: "The internal app sharing download url if track was 'internalsharing'"
