@@ -28,6 +28,7 @@ export interface EditOptions {
     mappingFile?: string;
     name?: string;
     status?: string;
+    changesNotSentForReview?: boolean;
 }
 
 export async function uploadToPlayStore(options: EditOptions, releaseFiles: string[]): Promise<string | undefined> {
