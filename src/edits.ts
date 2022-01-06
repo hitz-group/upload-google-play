@@ -28,7 +28,6 @@ export interface EditOptions {
     mappingFile?: string;
     name?: string;
     status?: string;
-    changesNotSentForReview?: boolean;
 }
 
 export async function uploadToPlayStore(options: EditOptions, releaseFiles: string[]): Promise<string | undefined> {
@@ -87,7 +86,6 @@ export async function uploadToPlayStore(options: EditOptions, releaseFiles: stri
             auth: options.auth,
             editId: appEdit.data.id!,
             packageName: options.applicationId,
-            changesNotSentForReview: options.changesNotSentForReview,
         });
 
         // Simple check to see whether commit was successful
